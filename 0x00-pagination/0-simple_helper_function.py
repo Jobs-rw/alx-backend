@@ -22,4 +22,4 @@ page_number = 3
 items_per_page = 10
 start, end = index_range(page_number, items_per_page)
 
-print(f"For page {page_number}, the start index is {start} and the end index is {end}.")
+print("For page {}, the start index is {} and the end index is {}.".format(page_number, start, end))
