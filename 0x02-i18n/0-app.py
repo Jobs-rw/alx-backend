@@ -2,20 +2,13 @@
 """
 A Basic flask application
 """
-from flask import Flask
-from flask import render_template
-
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
-@app.route('/', strict_slashes=False)
-def index() -> str:
-    """
-    Renders a basic html template
-    """
-    return render_template('0-index.html')
-
+@app.route('/')
+def index():
+    return render_template('index.html', title='Welcome to Holberton', header='Hello world')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
